@@ -1,0 +1,18 @@
+﻿ Activity 的四种启动模式：
+	
+
+standard: 
+默认的模式，每次启动会新创建一个Activity对象
+ 	
+
+singleTop:
+在当前任务栈中，判断栈顶是否为当前的Activity，如果是，就直接使用，如果不是，再创建新的Activity放入栈顶
+
+
+singleTask:
+在当前任务栈中，判断栈里是否存在Activity，如果不存在，创建一个新Activity入栈，如果存在，会把
+该Activity之上的所有Activity清除出栈，显示当前Activity
+
+
+singleInstance: 
+新创建一个任务栈，放入新创建的Activity,该任务栈只允许存在一个Activity实例，如果已存在，那么会切换到该任务栈
